@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="js/vendor.bundle.js"></script>
+        <script src="node_modules/underscore/underscore-min.js"></script>
+        <script src="js/app.bundle.js"></script>
+        
+    </head>
+    <body ng-app="myApp">
+        <div class="container">
+        <br />
+        <div ng-controller="homeController as homectrl">
+            <div class="alert alert-danger" ng-class="{'alert-danger': !homectrl.github, 'alert-success': homectrl.github}">{{1+homectrl.valueOne}} <yep-nope check="homectrl.github"></yep-nope></div>
+        </div>
+        </div>
+    </body>
+</html>
